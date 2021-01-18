@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/', 'API\ApiController@view');
+Route::get('tag/add','API\ApiController@create');
+Route::post('tag/add','API\ApiController@store');
+Route::get('tags','API\ApiController@index');
+Route::get('tag/chart','API\ApiController@chart');
